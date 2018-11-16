@@ -1,1 +1,1 @@
-# hash-table-haskell
+# Hash Table in Haskell
