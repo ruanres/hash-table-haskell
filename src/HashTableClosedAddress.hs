@@ -1,4 +1,8 @@
-module HashTable 
+{-
+	Hash table closed address
+-}
+
+module HashTableClosedAddress
 (
   new,
   insert,
@@ -11,6 +15,12 @@ module HashTable
 
 import qualified Data.Map as M
 import Data.Maybe (fromMaybe)
+
+{-
+  Constant used to indicate 
+  an invalid position on the table
+-}
+notFound = -1
 
 
 {-
@@ -47,8 +57,7 @@ remove value table = M.adjust (filter (\v -> v /= value)) (hash value) table
 {-
   Verifies if the pair key value exists
 -}
-contain value table = elem value (fromMaybe [] item)
-  where item = search value table
+contain value table = (search value table) /= notFound
 
 
 {- 
@@ -56,4 +65,13 @@ contain value table = elem value (fromMaybe [] item)
   if it exists then Just it is returned,
   otherwise Nothing is returned 
 -}
-search value table = M.lookup (hash value) table
+search value table
+  | elem value (getValues key table) = key
+  | otherwise = notFound
+  where key = hash value
+
+
+{-
+	Get the values associated with the given key
+-}
+getValues key table = fromMaybe [] (M.lookup key table)
