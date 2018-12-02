@@ -38,11 +38,11 @@ hash value = (length value) `mod` size
 {-
 	Create a new table
 -}
-new _ = M.empty;
+new _ = M.empty
 
 
 {-
-	Inserts a new value to the table,
+	Inserts a new value in the table,
 	if the key already exists then its associated value is updated
 -}
 insert value table = M.insertWith (++) (hash value) [value] table
@@ -55,15 +55,15 @@ remove value table = M.adjust (filter (\v -> v /= value)) (hash value) table
 
 
 {-
-  Verifies if the pair key value exists
+  Verifies if the value exists
 -}
 contain value table = (search value table) /= notFound
 
 
 {- 
-  Get the value associated with a key, 
-  if it exists then Just it is returned,
-  otherwise Nothing is returned 
+	Returns the value key if it
+	is present in the table. Otherwise,
+	an invalid position is returned
 -}
 search value table
   | elem value (getValues key table) = key
