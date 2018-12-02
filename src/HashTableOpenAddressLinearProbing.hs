@@ -1,5 +1,5 @@
 {-
-	Hash table open address linear probing
+  Hash table open address linear probing
 -}
 
 module HashTableOpenAddressLinearProbing
@@ -44,13 +44,13 @@ size = 3
 
 
 {-
-	Calculate the key of a value using the given prob
+  Calculate the key of a value using the given prob
 -}
 hash value prob = ((length value) + prob) `mod` (size)
 
 
 {-
-	Create a new table
+  Create a new table
 -}
 new _ = M.empty
 
@@ -93,9 +93,9 @@ contain value table = (search value table) /= notFound
 
 
 {- 
-	Returns the value key if it
-	is present in the table. Otherwise,
-	an invalid position is returned
+  Returns the value key if it
+  is present in the table. Otherwise,
+  an invalid position is returned
 -}
 search value table = searchProbing value initialProb table
 
@@ -109,7 +109,7 @@ searchProbing value prob table
 
 
 {-
-	Get the value associated with the given key
+  Get the value associated with the given key
 -}
 get key table = M.lookup key table
 
