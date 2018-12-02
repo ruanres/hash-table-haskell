@@ -1,5 +1,5 @@
 {-
-	Hash table closed address
+  Hash table closed address
 -}
 
 module HashTableClosedAddress
@@ -30,20 +30,20 @@ size = 30
 
 
 {-
-	Calculate the key of a value
+  Calculate the key of a value
 -}
 hash value = (length value) `mod` size 
 
 
 {-
-	Create a new table
+  Create a new table
 -}
 new _ = M.empty
 
 
 {-
-	Inserts a new value in the table,
-	if the key already exists then its associated value is updated
+  Inserts a new value in the table,
+  if the key already exists then its associated value is updated
 -}
 insert value table = M.insertWith (++) (hash value) [value] table
 
@@ -61,9 +61,9 @@ contain value table = (search value table) /= notFound
 
 
 {- 
-	Returns the value key if it
-	is present in the table. Otherwise,
-	an invalid position is returned
+  Returns the value key if it
+  is present in the table. Otherwise,
+  an invalid position is returned
 -}
 search value table
   | elem value (getValues key table) = key
@@ -72,6 +72,6 @@ search value table
 
 
 {-
-	Get the values associated with the given key
+  Get the values associated with the given key
 -}
 getValues key table = fromMaybe [] (M.lookup key table)
