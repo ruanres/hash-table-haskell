@@ -73,7 +73,16 @@ testsHash = TestList [TestLabel "hashBatataTest" hashBatataTest, TestLabel "hash
 
 
 
- 
+-- tests = TestList [
+--   TestLabel "listaVaziaTest" listaVaziaTest, TestLabel "listaUmElementoTest" listaUmElementoTest, TestLabel "listaDoisElementosTest" listaDoisElementosTest,
+--   TestLabel "tamanhoLista" tamanhoLista, TestLabel "listaSemBatataTest" listaSemBatataTest, TestLabel "listaSemCascaTest" listaSemCascaTest,
+--   TestLabel "listaContemBatataTest" listaContemBatataTest,TestLabel "listaContemCascaTest" listaContemCascaTest,TestLabel "listaNaoContemBatataTest" listaNaoContemBatataTest,TestLabel "listaNaoContemCascaTest" listaNaoContemCascaTest,
+--   TestLabel "procuraBatataTest" procuraBatataTest, TestLabel "procuraCascaTest" procuraCascaTest,TestLabel "naoAchaBatataTest" naoAchaBatataTest,TestLabel "naoAchaCascaTest" naoAchaCascaTest,
+--   TestLabel "hashBatataTest" hashBatataTest, TestLabel "hashCascaTest" hashCascaTest
+--   ]
 
+ 
+-- runTests = do
+--     runTestTT tests
 
 

@@ -97,3 +97,17 @@ listaTresElementos = insert "coco" listaDoisElementos
 listaTresElementosCheiaTest = TestCase (assertBool "Esta Cheia," (isFull listaTresElementos))
 
 testsIsFull = TestList [TestLabel "listaUmElementoCheiaTest" listaUmElementoCheiaTest, TestLabel "listaDoisElementosCheiaTest" listaDoisElementosCheiaTest, TestLabel "listaTresElementosCheiaTest" listaTresElementosCheiaTest]
+
+
+-- tests = TestList [
+--   TestLabel "listaVaziaTest" listaVaziaTest, TestLabel "listaUmElementoTest" listaUmElementoTest, TestLabel "listaDoisElementosTest" listaDoisElementosTest,
+--   TestLabel "listaSemBatataTest" listaSemBatataTest, TestLabel "listaSemCascaTest" listaSemCascaTest,
+--   TestLabel "contemBatataTest" contemBatataTest,TestLabel "contemCascaTest" contemCascaTest,TestLabel "naoContemCascaTest" naoContemCascaTest,TestLabel "naoContemBatataTest" naoContemBatataTest,
+--   TestLabel "procuraBatataTest" procuraBatataTest, TestLabel "procuraCascaTest" procuraCascaTest,TestLabel "naoAchaBatataTest" naoAchaBatataTest,TestLabel "naoAchaCascaTest" naoAchaCascaTest,
+--   TestLabel "hashBatataTest" hashBatataTest, TestLabel "hashCascaTest" hashCascaTest,
+--   TestLabel "tamanhoUmElementoTest" tamanhoUmElementoTest, TestLabel "tamanhoDoisElementosTest" tamanhoDoisElementosTest, TestLabel "tamanhoSemUmElementoTest" tamanhoSemUmElementoTest, TestLabel "tamanhoSemDoisElementosTest" tamanhoSemDoisElementosTest,
+--   TestLabel "listaUmElementoCheiaTest" listaUmElementoCheiaTest, TestLabel "listaDoisElementosCheiaTest" listaDoisElementosCheiaTest, TestLabel "listaTresElementosCheiaTest" listaTresElementosCheiaTest
+--   ]
+
+-- runTests = do
+--     runTestTT tests
